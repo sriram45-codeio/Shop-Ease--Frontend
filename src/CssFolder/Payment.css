@@ -1,0 +1,109 @@
+.payment-container {
+  max-width: 450px;
+  margin: 80px auto;
+  background: #e6f7f9;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 191, 255, 0.2);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.payment-container h2 {
+  color: #0a7f9c;
+  font-size: 26px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.payment-methods {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.payment-methods label {
+  background: #f0fdff;
+  border: 2px solid #b2ebf2;
+  border-radius: 8px;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  color: #045a67;
+}
+
+.payment-methods input {
+  margin-right: 10px;
+  accent-color: #00bcd4;
+}
+
+.payment-methods label:hover {
+  background: #d6faff;
+  transform: scale(1.02);
+}
+
+.card-details,
+.upi-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.card-details input,
+.upi-details input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #b2ebf2;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.card-details input:focus,
+.upi-details input:focus {
+  border-color: #00bcd4;
+  box-shadow: 0 0 6px rgba(0, 188, 212, 0.4);
+  outline: none;
+}
+
+.confirm-btn {
+  background: linear-gradient(135deg, #00bcd4, #0097a7);
+  border: none;
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  padding: 14px 0;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.confirm-btn:hover {
+  background: linear-gradient(135deg, #00acc1, #007c91);
+  transform: scale(1.05);
+}
+
+.confirm-btn:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 500px) {
+  .payment-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .payment-container h2 {
+    font-size: 22px;
+  }
+
+  .confirm-btn {
+    font-size: 15px;
+  }
+}
