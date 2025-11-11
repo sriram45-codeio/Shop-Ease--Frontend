@@ -5,7 +5,6 @@ import "../CssFolder/Cart.css";
 const CartPage = ({ cart, setCart }) => {
   const navigate = useNavigate();
 
-  // Increase quantity
   const increaseQty = (id) => {
     const updated = cart.map((item) =>
       item.id === id ? { ...item, quantity: item.quantity + 1 } : item
@@ -13,7 +12,6 @@ const CartPage = ({ cart, setCart }) => {
     setCart(updated);
   };
 
-  // Decrease quantity
   const decreaseQty = (id) => {
     const updated = cart.map((item) =>
       item.id === id && item.quantity > 1 ? { ...item, quantity: item.quantity - 1 } : item
@@ -21,7 +19,6 @@ const CartPage = ({ cart, setCart }) => {
     setCart(updated);
   };
 
-  // Remove item
   const removeItem = (id) => {
     const updated = cart.filter((item) => item.id !== id);
     setCart(updated);
@@ -35,7 +32,7 @@ const CartPage = ({ cart, setCart }) => {
 
       {cart.length === 0 ? (
         <div className="empty-cart">
-          <p>Your cart is empty 🛍️</p>
+          <p>Your cart is empty</p>
           <button className="shop-now-btn" onClick={() => navigate("/Shop")}>
             Shop Now
           </button>

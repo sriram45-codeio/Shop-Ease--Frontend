@@ -1,9 +1,7 @@
-
-
 #nav-bar {
-  background-color: #31373e; /* dark gray-blue */
-  padding: 25px 80px; /* bigger padding for taller navbar */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25); /* deeper shadow */
+  background-color: #434b54;
+  padding: 25px 80px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -19,7 +17,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 50px; /* more space between items */
+  gap: 50px;
   margin: 0;
   padding: 0;
 }
@@ -30,9 +28,9 @@
 
 #ulo li a {
   text-decoration: none;
-  color: #e5e7eb; /* light gray */
+  color: #e5e7eb;
   font-weight: 600;
-  font-size: 22px; /* bigger font for better readability */
+  font-size: 22px;
   padding: 8px 12px;
   border-radius: 6px;
   transition: all 0.3s ease;
@@ -42,8 +40,8 @@
 }
 
 #ulo li a:hover {
-  color: #3b82f6; /* blue hover color */
-  background-color: rgba(177, 202, 237, 0.1); /* subtle hover background */
+  color: #3b82f6;
+  background-color: rgba(177, 202, 237, 0.1);
   transform: translateY(-2px);
 }
 
@@ -59,7 +57,7 @@
 }
 
 #ulo li a span {
-  background-color: #ef4444; /* red */
+  background-color: #ef4444;
   color: white;
   font-size: 15px;
   padding: 3px 7px;

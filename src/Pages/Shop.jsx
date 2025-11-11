@@ -8,9 +8,9 @@ function Shop({ addToCart }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:8000/products')
+    axios.get('https://shop-ease-backend-m297.onrender.com/products')
       .then((res) => {
-        setProducts(res.data.data); 
+        setProducts(res.data.data);
         setLoading(false);
       })
       .catch((err) => {
@@ -39,7 +39,7 @@ function Shop({ addToCart }) {
                 <img
                   src={product.image}
                   alt={product.title}
-                  onError={(e) => e.target.src = "/images/no-image.png"} 
+                  onError={(e) => e.target.src = "/images/no-image.png"}
                 />
                 <h3>{product.title}</h3>
               </Link>

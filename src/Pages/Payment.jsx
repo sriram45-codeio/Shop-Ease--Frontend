@@ -7,14 +7,12 @@ const PaymentPage = ({ clearCart }) => {
   const navigate = useNavigate();
 
   const handlePayment = () => {
-    alert(`Payment successful using ${method.toUpperCase()} ✅`);
+    alert(`Payment successful using ${method.toUpperCase()}`);
 
-    
     if (clearCart) {
       clearCart();
     }
 
-    // Optionally navigate to home or success page
     navigate("/");
   };
 
