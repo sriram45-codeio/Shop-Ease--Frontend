@@ -19,10 +19,20 @@ function Home({ addToCart }) {
         setLoading(false);
       });
   }, []);
+if (loading) {
+  return (
+    <div style={{
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      height: "100vh",
+      width: "100%"
+    }}>
+      <img src="Loading.gif" alt="Loading..." />
+    </div>
+  );
+}
 
-  if (loading) {
-    return <div style={{ margin: "50%" }}><img src="Loading.gif" alt="Loading..." /></div>;
-  }
 
   return (
     <div>
