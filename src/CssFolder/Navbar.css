@@ -1,23 +1,20 @@
 #nav-bar {
   background-color: #434b54;
-  padding: 25px 80px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
+  padding: 16px 28px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-radius: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.3s ease;
 }
 
 #ulo {
   list-style: none;
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 48px;
   margin: 0;
   padding: 0;
 }
@@ -30,7 +27,7 @@
   text-decoration: none;
   color: #e5e7eb;
   font-weight: 600;
-  font-size: 22px;
+  font-size: 20px;
   padding: 8px 12px;
   border-radius: 6px;
   transition: all 0.3s ease;
@@ -41,41 +38,79 @@
 
 #ulo li a:hover {
   color: #3b82f6;
-  background-color: rgba(177, 202, 237, 0.1);
+  background-color: rgba(177, 202, 237, 0.15);
   transform: translateY(-2px);
 }
 
 #ulo li a img {
-  height: 45px;
-  width: 45px;
-  vertical-align: middle;
+  height: 32px;
+  width: 32px;
   transition: transform 0.3s ease;
 }
 
 #ulo li a img:hover {
-  transform: scale(1.1);
+  transform: scale(1.12);
 }
 
 #ulo li a span {
   background-color: #ef4444;
   color: white;
-  font-size: 15px;
+  font-size: 12px;
   padding: 3px 7px;
   border-radius: 50%;
   position: absolute;
-  top: -10px;
-  right: -15px;
+  top: -8px;
+  right: -14px;
   font-weight: bold;
-  transition: all 0.3s ease;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  #nav-bar {
+    padding: 14px 20px;
+  }
   #ulo {
-    flex-direction: column;
-    gap: 25px;
+    gap: 32px;
+  }
+  #ulo li a {
+    font-size: 18px;
+  }
+  #ulo li a img {
+    height: 30px;
+    width: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  #nav-bar {
+    padding: 12px 10px;
   }
 
-  #nav-bar {
-    padding: 20px 40px;
+  #ulo {
+    gap: 20px;
+  }
+
+  #ulo li a {
+    font-size: 16px;
+    padding: 6px 8px;
+  }
+
+  #ulo li a img {
+    height: 26px;
+    width: 26px;
+  }
+
+  #ulo li a span {
+    font-size: 10px;
+    top: -6px;
+    right: -10px;
+  }
+}
+
+@media (max-width: 420px) {
+  #ulo {
+    gap: 14px;
+  }
+  #ulo li a {
+    font-size: 15px;
   }
 }

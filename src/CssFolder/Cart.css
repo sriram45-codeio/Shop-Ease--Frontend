@@ -1,137 +1,202 @@
 .cart-container {
   max-width: 900px;
-  margin: 50px auto;
-  padding: 25px;
+  margin: 40px auto;
+  padding: 20px;
   background-color: #f8ffff;
   border-radius: 16px;
-  box-shadow: 0 6px 20px rgba(0, 200, 200, 0.15);
+  box-shadow: 0 6px 18px rgba(0, 180, 180, 0.12);
 }
 
 .cart-container h2 {
   text-align: center;
   color: #008b8b;
   margin-bottom: 25px;
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   font-weight: 600;
 }
 
+/* ITEMS LIST */
 .cart-items {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
+/* SINGLE ITEM */
 .cart-item {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background-color: #e0ffff;
+  gap: 18px;
+  background: #e0ffff;
+  padding: 18px;
   border-radius: 12px;
-  padding: 15px 20px;
-  box-shadow: 0 3px 8px rgba(0, 200, 200, 0.1);
-  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 150, 150, 0.12);
+  transition: 0.3s ease;
 }
 
 .cart-item:hover {
-  transform: scale(1.02);
-  background-color: #d2f7f7;
+  transform: translateY(-3px);
+  background: #d2f7f7;
 }
 
 .cart-item img {
-  width: 70px;
-  height: 70px;
-  border-radius: 8px;
+  width: 85px;
+  height: 85px;
+  border-radius: 10px;
   object-fit: cover;
   border: 2px solid #00ced1;
 }
 
+/* DETAILS */
 .cart-item-details {
   flex: 1;
-  margin-left: 15px;
 }
 
 .cart-item-details h4 {
+  margin-bottom: 4px;
   color: #004d4d;
-  margin-bottom: 5px;
-  font-weight: 600;
+  font-size: 1.1rem;
 }
 
 .cart-item-details p {
   color: #008b8b;
-  font-size: 0.95rem;
+  font-weight: 500;
 }
 
+/* QTY BUTTONS */
 .qty-buttons {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
-.qty-buttons button {
-  background-color: #00bcd4;
+.qty-btn {
+  background: #00bcd4;
   border: none;
-  color: white;
-  font-size: 1rem;
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
+  font-size: 18px;
+  color: white;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.2s ease;
 }
 
-.qty-buttons button:hover {
-  background-color: #0097a7;
+.qty-btn:hover {
+  background: #0097a7;
 }
 
 .qty-buttons span {
-  font-weight: 600;
+  font-size: 1rem;
   color: #004d4d;
+  font-weight: 600;
 }
 
+/* REMOVE BUTTON */
 .cart-remove-btn {
-  background-color: #ff4d4d;
-  border: none;
+  background: #ff4d4d;
   color: white;
-  padding: 8px 14px;
+  border: none;
+  padding: 10px 14px;
   border-radius: 8px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .cart-remove-btn:hover {
-  background-color: #ff1a1a;
+  background: #e60000;
 }
 
-.cart-total {
-  text-align: right;
+/* FOOTER */
+.cart-footer {
   margin-top: 25px;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #004d4d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.pay-now-btn,
-.shop-now-btn {
-  display: block;
-  margin: 25px auto 0;
-  background-color: #00bcd4;
-  color: white;
-  border: none;
+.cart-footer h3 {
+  color: #004d4d;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.pay-now-btn {
+  background: #00bcd4;
+  color: #fff;
   padding: 12px 28px;
   border-radius: 10px;
-  font-size: 1rem;
+  border: none;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
-.pay-now-btn:hover,
-.shop-now-btn:hover {
-  background-color: #0097a7;
+.pay-now-btn:hover {
+  background: #0097a7;
   transform: scale(1.05);
 }
 
+/* EMPTY CART */
 .empty-cart {
   text-align: center;
-  padding: 50px;
+  padding: 40px;
   color: #004d4d;
+}
+
+.shop-now-btn {
+  background: #00bcd4;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 18px;
+  transition: 0.3s ease;
+}
+
+.shop-now-btn:hover {
+  background: #0097a7;
+  transform: scale(1.05);
+}
+
+/* 📱 MOBILE RESPONSIVE */
+@media (max-width: 700px) {
+
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .cart-item img {
+    width: 100%;
+    height: 230px;
+    object-fit: contain;
+  }
+
+  .cart-footer {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+
+  .pay-now-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 450px) {
+  .cart-container {
+    padding: 14px;
+  }
+  
+  .cart-item {
+    padding: 12px;
+  }
+
+  .qty-btn {
+    width: 28px;
+    height: 28px;
+  }
 }

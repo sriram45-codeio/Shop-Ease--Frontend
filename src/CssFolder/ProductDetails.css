@@ -1,83 +1,97 @@
 .product-details {
   max-width: 900px;
-  margin: 50px auto;
-  padding: 20px;
+  margin: 40px auto;
+  padding: 22px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease;
-}
-
-.product-details:hover {
-  transform: translateY(-5px);
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
 }
 
 .product-details h1 {
   font-size: 2rem;
   color: #222;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   text-align: center;
 }
 
 .product-details img {
-  width: 300px;
-  height: auto;
+  width: 340px;
+  max-width: 100%;
   border-radius: 12px;
-  object-fit: cover;
-  margin-bottom: 20px;
-  transition: transform 0.3s ease;
-  cursor: pointer;
+  object-fit: contain;
+  margin-bottom: 18px;
+  transition: 0.3s ease;
 }
 
 .product-details img:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 .product-details p {
   font-size: 1.1rem;
   color: #555;
-  line-height: 1.6;
-  margin-bottom: 15px;
   text-align: center;
+  line-height: 1.6;
+  margin-bottom: 12px;
 }
 
-.product-details .price {
-  font-size: 1.5rem;
+.price {
+  font-size: 1.6rem;
   font-weight: bold;
   color: #ff4d4f;
   margin-bottom: 20px;
 }
 
-.product-details .buy-btn {
-  padding: 12px 25px;
-  font-size: 1rem;
-  color: #fff;
+.buy-btn {
+  padding: 12px 28px;
   background: #1890ff;
+  color: #fff;
   border: none;
   border-radius: 8px;
+  font-size: 1rem;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
+  transition: 0.3s ease;
 }
 
-.product-details .buy-btn:hover {
+.buy-btn:hover {
   background: #40a9ff;
   transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
   .product-details {
-    padding: 15px;
-    margin: 30px 10px;
+    margin: 25px 12px;
+    padding: 18px;
+  }
+  
+  .product-details h1 {
+    font-size: 1.7rem;
   }
 
   .product-details img {
     width: 100%;
   }
 
+  .product-details p {
+    font-size: 1rem;
+  }
+
+  .price {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 420px) {
   .product-details h1 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+  }
+
+  .buy-btn {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 0.95rem;
   }
 }

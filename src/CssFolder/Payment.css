@@ -13,32 +13,34 @@
   color: #0a7f9c;
   font-size: 26px;
   margin-bottom: 20px;
-  letter-spacing: 1px;
   font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .payment-methods {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  width: 100%;
   margin-bottom: 25px;
+  gap: 10px;
 }
 
 .payment-methods label {
   background: #f0fdff;
   border: 2px solid #b2ebf2;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 12px 15px;
-  margin: 8px 0;
   width: 100%;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
   font-weight: 500;
   color: #045a67;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .payment-methods input {
-  margin-right: 10px;
   accent-color: #00bcd4;
 }
 
@@ -52,6 +54,7 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  width: 100%;
   margin-bottom: 25px;
 }
 
@@ -61,7 +64,8 @@
   border-radius: 8px;
   border: 2px solid #b2ebf2;
   font-size: 15px;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
+  width: 100%;
 }
 
 .card-details input:focus,
@@ -81,7 +85,7 @@
   width: 100%;
   border-radius: 10px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .confirm-btn:hover {
@@ -90,17 +94,37 @@
 }
 
 .confirm-btn:active {
-  transform: scale(0.98);
+  transform: scale(0.97);
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .payment-container {
-    width: 90%;
-    padding: 20px;
+    width: 92%;
+    padding: 22px;
+    margin: 50px auto;
   }
 
   .payment-container h2 {
     font-size: 22px;
+  }
+
+  .confirm-btn {
+    font-size: 16px;
+  }
+
+  .payment-methods label {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .payment-container {
+    padding: 18px;
+  }
+
+  .payment-container h2 {
+    font-size: 20px;
   }
 
   .confirm-btn {
